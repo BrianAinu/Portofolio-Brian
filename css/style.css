@@ -12,20 +12,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
+/* Navbar Base Styles */
 .navbar {
     position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
     z-index: 1000;
-    border-right: 1px solid rgba(0, 247, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 .nav-logo {
@@ -1669,4 +1661,167 @@ body {
         font-size: 1.3rem;
         margin-bottom: 1rem;
     }
+}
+
+/* Navbar Base Styles */
+.navbar {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Desktop Styles (> 768px) */
+@media (min-width: 769px) {
+    .navbar {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 247, 255, 0.1);
+    }
+
+    .nav-logo {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .nav-link {
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .nav-link i {
+        font-size: 1.2rem;
+    }
+
+    .nav-link span {
+        font-size: 1rem;
+    }
+
+    /* Padding untuk konten di bawah navbar */
+    .content-wrapper {
+        padding-top: 80px;
+    }
+}
+
+/* Mobile Styles (≤ 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(0, 247, 255, 0.1);
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3rem;
+        min-width: 50px;
+    }
+
+    .nav-link i {
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+    }
+
+    .nav-link span {
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
+    /* Padding untuk konten di atas navbar mobile */
+    .content-wrapper {
+        padding-bottom: 70px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0.4rem 0;
+    }
+
+    .nav-link {
+        padding: 0.2rem;
+        min-width: 45px;
+    }
+
+    .nav-link i {
+        font-size: 1rem;
+    }
+
+    .nav-link span {
+        font-size: 0.6rem;
+    }
+}
+
+/* Active & Hover States */
+.nav-link.active {
+    color: #00f7ff;
+}
+
+.nav-link:hover {
+    color: #00f7ff;
+    transform: translateY(-2px);
+}
+
+/* Logo Styles */
+.nav-logo svg {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-circle {
+    stroke: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    fill: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover .logo-circle {
+    stroke: #00f7ff;
+}
+
+.nav-logo:hover .logo-text {
+    fill: #00f7ff;
 }
