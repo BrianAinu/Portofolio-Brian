@@ -31,4 +31,11 @@
     #hologramCanvas {
         opacity: 0.4;
     }
+}
+
+/* Mobile Optimization */
+@media (max-width: 320px) {
+    #hologramCanvas {
+        opacity: 0.3;
+    }
 } 

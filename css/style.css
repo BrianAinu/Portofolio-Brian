@@ -1602,3 +1602,82 @@ body {
         margin: 0 auto;
     }
 }
+
+/* Mobile Navigation Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-links {
+        gap: 0;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    .nav-link {
+        padding: 0.3rem;
+        min-width: 45px;
+    }
+
+    .nav-link i {
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+    .nav-link span {
+        font-size: 0.65rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0.3rem 0;
+    }
+
+    .nav-links {
+        padding: 0 2px;
+    }
+
+    .nav-link {
+        padding: 0.2rem;
+        min-width: 40px;
+    }
+
+    .nav-link i {
+        font-size: 0.9rem;
+        margin-bottom: 1px;
+    }
+
+    .nav-link span {
+        font-size: 0.55rem;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 280px) {
+    .nav-link {
+        min-width: 35px;
+        padding: 0.15rem;
+    }
+
+    .nav-link i {
+        font-size: 0.8rem;
+    }
+
+    .nav-link span {
+        font-size: 0.5rem;
+    }
+}
+
+/* Ensure content doesn't hide behind navbar */
+section:last-of-type {
+    margin-bottom: 65px;
+}
+
+@media (max-width: 320px) {
+    section:last-of-type {
+        margin-bottom: 55px;
+    }
+}
