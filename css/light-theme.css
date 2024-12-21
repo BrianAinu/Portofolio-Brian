@@ -1,0 +1,27 @@
+body {
+    background: #575757;
+    color: #000;
+}
+
+.navbar {
+    background: rgba(80, 80, 80, 0.95);
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #007bff;
+}
+
+.profile-card,
+.contact-card {
+    background: #575757;
+    border: 1px solid rgb(45, 44, 44)757;
+}
+
+.info-item {
+    color: #333;
+} 

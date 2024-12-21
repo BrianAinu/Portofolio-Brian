@@ -1825,3 +1825,24 @@ body {
 .nav-logo:hover .logo-text {
     fill: #00f7ff;
 }
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#themeButton {
+    background-color: #00f7ff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#themeButton:hover {
+    background-color: #00f7ff;
+}
