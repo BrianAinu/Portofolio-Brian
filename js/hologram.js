@@ -42,9 +42,7 @@ class HologramBackground {
     }
 
     createParticles() {
-        const isMobile = window.innerWidth <= 320;
-        const density = isMobile ? 25000 : 15000;
-        const numberOfParticles = Math.floor((this.canvas.width * this.canvas.height) / density);
+        const numberOfParticles = Math.floor((this.canvas.width * this.canvas.height) / 15000);
         
         for (let i = 0; i < numberOfParticles; i++) {
             this.particles.push({

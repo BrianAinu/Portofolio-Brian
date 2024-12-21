@@ -100,11 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setActiveNav() {
         const scrollY = window.pageYOffset;
-        const isMobile = window.innerWidth <= 320;
 
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - (isMobile ? 50 : 100);
+            const sectionTop = section.offsetTop - 100;
             const sectionId = section.getAttribute('id');
 
             if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -182,9 +181,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // Tambahkan event listener untuk orientasi
-    window.addEventListener('orientationchange', () => {
-        setTimeout(setActiveNav, 100);
-    });
 }); 

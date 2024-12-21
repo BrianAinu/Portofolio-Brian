@@ -1603,81 +1603,70 @@ body {
     }
 }
 
-/* Mobile Navigation Adjustments */
+/* Experience Section Styles */
+.experience-section {
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    background: #000;
+    position: relative;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-subsection {
+    margin-top: 4rem;
+}
+
+.experience-subsection h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.experience-subsection h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 25px;
+    background: #00f7ff;
+    border-radius: 2px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem 0;
+    .experience-section {
+        padding: 4rem 1rem;
     }
 
-    .nav-links {
-        gap: 0;
-        justify-content: space-between;
-        padding: 0 5px;
+    .experience-subsection {
+        margin-top: 3rem;
     }
 
-    .nav-link {
-        padding: 0.3rem;
-        min-width: 45px;
+    .experience-subsection h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
-
-    .nav-link i {
-        font-size: 1rem;
-        margin-bottom: 2px;
-    }
-
-    .nav-link span {
-        font-size: 0.65rem;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 320px) {
-    .navbar {
-        padding: 0.3rem 0;
-    }
-
-    .nav-links {
-        padding: 0 2px;
-    }
-
-    .nav-link {
-        padding: 0.2rem;
-        min-width: 40px;
-    }
-
-    .nav-link i {
-        font-size: 0.9rem;
-        margin-bottom: 1px;
-    }
-
-    .nav-link span {
-        font-size: 0.55rem;
-    }
-}
-
-/* Very Small Devices */
-@media (max-width: 280px) {
-    .nav-link {
-        min-width: 35px;
-        padding: 0.15rem;
-    }
-
-    .nav-link i {
-        font-size: 0.8rem;
-    }
-
-    .nav-link span {
-        font-size: 0.5rem;
-    }
-}
-
-/* Ensure content doesn't hide behind navbar */
-section:last-of-type {
-    margin-bottom: 65px;
 }
 
 @media (max-width: 320px) {
-    section:last-of-type {
-        margin-bottom: 55px;
+    .experience-section {
+        padding: 3rem 0.8rem;
+    }
+
+    .experience-subsection {
+        margin-top: 2rem;
+    }
+
+    .experience-subsection h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
 }
