@@ -1831,18 +1831,37 @@ body {
     top: 10px;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 
 #themeButton {
-    background-color: #00f7ff;
-    color: rgb(0, 0, 0);
+    background-color: rgba(164, 164, 164, 0.7);
+    color: rgb(255, 254, 254);
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #themeButton:hover {
-    background-color: #00f7ff;
+    background-color: rgba(164, 164, 164, 0.7);
+    transform: scale(1.05);
+}
+
+#themeIcon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#themeIcon:hover {
+    transform: scale(1.1);
+}
+
+#themeLabel {
+    font-size: 16px;
+    margin-left: 5px;
+    color: white;
 }
