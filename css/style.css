@@ -1865,3 +1865,24 @@ body {
     margin-left: 5px;
     color: white;
 }
+
+/* Tambahkan ini untuk memastikan animasi tetap aktif di mobile */
+@media (max-width: 768px) {
+    .project-card {
+        opacity: 0; /* Pastikan elemen tidak terlihat sebelum animasi */
+        transform: translateY(20px); /* Posisi awal untuk animasi */
+        animation: fadeIn 0.5s forwards; /* Terapkan animasi */
+    }
+
+    /* Definisikan animasi fadeIn */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -53,6 +53,26 @@ class PageAnimations {
                 }, index * 200);
             }
         });
+
+        // Animasi untuk proyek di mobile
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            card.style.opacity = '0'; // Pastikan elemen tidak terlihat sebelum animasi
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+            }, index * 200); // Delay untuk setiap kartu
+        });
+
+        // Animasi untuk sertifikat di mobile
+        const certificateCards = document.querySelectorAll('.certificate-card');
+        certificateCards.forEach((card, index) => {
+            card.style.opacity = '0'; // Pastikan elemen tidak terlihat sebelum animasi
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+            }, index * 200); // Delay untuk setiap kartu
+        });
     }
 
     setupScrollObserver() {
@@ -85,6 +105,9 @@ class PageAnimations {
                 break;
             case 'contact':
                 this.animateContact(section);
+                break;
+            case 'sertifikat':
+                this.animateSertifikat(section);
                 break;
         }
     }
@@ -131,10 +154,13 @@ class PageAnimations {
     }
 
     animatePengalaman(section) {
-        const cards = section.querySelectorAll('.project-card, .certificate-card');
+        const cards = section.querySelectorAll('.project-card');
         cards.forEach((card, index) => {
-            card.classList.add('animate__animated', 'animate__fadeInUp');
-            card.style.animationDelay = `${index * 0.2}s`;
+            card.style.opacity = '0'; // Pastikan elemen tidak terlihat sebelum animasi
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+            }, index * 200); // Delay untuk setiap kartu
         });
     }
 
@@ -151,6 +177,17 @@ class PageAnimations {
             form.classList.add('animate__animated', 'animate__fadeInUp');
             form.style.animationDelay = '0.3s';
         }
+    }
+
+    animateSertifikat(section) {
+        const certificateCards = section.querySelectorAll('.certificate-card');
+        certificateCards.forEach((card, index) => {
+            card.style.opacity = '0'; // Pastikan elemen tidak terlihat sebelum animasi
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+            }, index * 200); // Delay untuk setiap kartu
+        });
     }
 }
 
